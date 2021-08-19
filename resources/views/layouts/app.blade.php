@@ -19,11 +19,14 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
+    <div class="w-full h-full bg-no-repeat bg-contain">
         @include('layouts.navigation')
 
+        <!-- Image background -->
+
+
         <!-- Page Heading -->
-        <header class="bg-white shadow">
+        <header class="bg-white">
             <div class="mx-auto py-2 px-4 sm:px-6 lg:px-8 bg-gray-600 text-gray-200">
                 Personal Budget Manager v4.0
             </div>
@@ -33,6 +36,7 @@
         <main>
             @yield('content')
         </main>
+    </div>
     </div>
 </body>
 

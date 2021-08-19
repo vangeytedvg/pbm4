@@ -394,30 +394,51 @@
     }
 
     .titlefont {
-        font-size: 30px;
+        font-size: 100px;
         font-weight: 900;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    .infofont {
+        font-size: 40px;
+        font-weight: 900;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+
+    /* At this point apparently Tailwind is not active yet, so set the background */
+    .bgimage {
+        background-image: url('/assets/images/background2.jpg');
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     </style>
 </head>
 
 <body class="antialiased bg-blue-700">
-    <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
-        @if(Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Home</a>
-            @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+    <div class="bgimage">
+        <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0">
+            @if(Route::has('login'))
+            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                @auth
+                <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Home</a>
+                @else
+                <a href="{{ route('login') }}" class="text-lg text-gray-700 underline">Log in</a>
 
-            @if(Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                @if(Route::has('register'))
+                <a href="{{ route('register') }}" class="ml-4 text-lg text-gray-700 underline">Register</a>
+                @endif
+                @endauth
+            </div>
             @endif
-            @endauth
-        </div>
-        @endif
 
-        <div class="titlefont">
-            Personal Budget Manager v4.0.190821
+            <div class="titlefont">
+                Personal Budget Manager v4.0
+            </div>
         </div>
     </div>
 </body>
