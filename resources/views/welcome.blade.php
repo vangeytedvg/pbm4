@@ -396,15 +396,13 @@
     .titlefont {
         font-size: 100px;
         font-weight: 900;
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
+        color: #eeeeee;
+        text-shadow: 2px 12px 14px #000000;
     }
 
     .infofont {
         font-size: 40px;
         font-weight: 900;
-        color: white;
-        text-shadow: 2px 2px 4px #000000;
     }
 
 
@@ -437,7 +435,7 @@
             @endif
 
             <div class="titlefont">
-                Personal Budget Manager v4.0
+                Personal Budget Manager v4
             </div>
         </div>
     </div>

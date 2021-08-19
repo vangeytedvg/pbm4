@@ -29,5 +29,10 @@ Route::get('/plans', function () {
     return view('layouts.budget.plans');
 })->middleware(['auth'])->name('plans');
 
+Route::get('/settings', function () {
+    return view('layouts.system.settings');
+})->middleware(['auth'])->name('settings');
+
+
 
 require __DIR__ . '/auth.php';

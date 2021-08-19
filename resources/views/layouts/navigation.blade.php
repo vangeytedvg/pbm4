@@ -1,3 +1,7 @@
+<!-- 
+    Menu on top of the application window
+    v4.0
+ -->
 <nav x-data="{ open: false }" class="bg-gray-700 border-b border-gray-600">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,16 +20,22 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                <!-- Navigation Links -->
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('invoices')" :active="request()->routeIs('invoices')">
                         {{ __('Invoices') }}
                     </x-nav-link>
                 </div>
-                <!-- Navigation Links -->
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('plans')" :active="request()->routeIs('plans')">
                         {{ __('Payment Plans') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('settings')" :active="request()->routeIs('settings')">
+                        {{ __('System administration') }}
                     </x-nav-link>
                 </div>
             </div>
